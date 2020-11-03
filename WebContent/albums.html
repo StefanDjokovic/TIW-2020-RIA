@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Messages application</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="utils.js" charset="utf-8" defer></script>
+	<script src="album.js" charset="utf-8" defer></script>
+	<link rel="stylesheet" type="text/css" href="styleAlbumView.css">
+</head>
+
+<body>
+	<p>Welcome <span id="id_username">Pepega</span>, enjoy your time!</p>
+	<h1>Albums Available:</h1>
+
+	<div align="right">
+		<a href='Logout'>Logout</a>
+	</div>
+
+	<input id="saveChanges" type="button" value="Save Changes">
+	<div id="albums">
+		<div class="albumbody" id="albumbody"></div>
+	</div>
+
+
+	<div>
+		<a href="#" id="left_nav" hidden="true">&#8249;</a>
+	</div>
+
+	<div>
+		<a href="#" id="right_nav" hidden="true">&#8250;</a>
+	</div>
+
+	<h2 id="emptyMessage"></h2>
+	<table id="albumview" border="1" style="display: none;">
+		<tr id="titles">
+			<th id="title1" style="display: none;"></th>
+			<th id="title2" style="display: none;"></th>
+			<th id="title3" style="display: none;"></th>
+			<th id="title4" style="display: none;"></th>
+			<th id="title5" style="display: none;"></th>
+		</tr>
+
+		<tr id=images>
+			<td id="image1" style="display: none;">
+				<a href="#">
+					<img id="img1" src="" alt="No pic rn" width=200>
+				</a>
+			</td>
+
+
+			<td id="image2" style="display: none;">
+				<a href="#">
+					<img src="" alt="No pic rn" width=200>
+				</a>
+			</td>
+
+			<td id="image3" style="display: none;">
+				<a href="#">
+					<img src="" alt="No pic rn" width=200>
+				</a>
+			</td>
+
+			<td id="image4" style="display: none;">
+				<a href="#">
+					<img src="" alt="No pic rn" width=200>
+				</a>
+			</td>
+
+			<td id="image5" style="display: none;">
+				<a href="#">
+					<img src="" alt="No pic rn" width=200>
+				</a>
+			</td>
+		</tr>
+
+	</table>
+
+	<div class="modal" id="modal">
+		<div class="modal-header">
+			<div id="modaltitle"></div>
+			<button id="closeButton" class="closeButton">&times;</button>
+		</div>
+		<div class="modal-body">
+			<img id="modalpic" src="" alt="loading">
+			<div id="modaldescr"></div>
+
+			<div class="create_new_comment">
+
+				<div class="user-name"></div>
+				<form action="#">
+					<fieldset>
+						<div class="form-group">
+							<label for="comment" class="sr-only">Comment</label>
+							<input type="text" name="newcomment" id="newcomment" class="form-control"
+								placeholder="Comment" required>
+						</div>
+						<input id="submitComment" type="button" value="Submit">
+						<p id="errorSubmitComment"></p>
+					</fieldset>
+				</form>
+			</div>
+
+			<div id="modalcomments"></div>
+		</div>
+	</div>
+
+</body>
+
+</html>
